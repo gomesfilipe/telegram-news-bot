@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    news-api (0.2.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  news-api
+
+BUNDLED WITH
+   2.4.3
