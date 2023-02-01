@@ -2,7 +2,7 @@ require 'telegram/bot'
 require 'date'
 require_relative '../news-api/newsApi.rb'
 
-class TelegramBot
+class NewsBot
   def initialize(token, channel, hour, category, country, q, pageSize)
     @token = token
     @channel = channel
@@ -13,7 +13,7 @@ class TelegramBot
     @pageSize = pageSize
   end
 
-  def send_news(bot)
+  private def send_news(bot)
     news = NEWS_API.get_news(@category, @country, @q, @pageSize)  
     messages = self.format_message(news)
     
@@ -22,9 +22,9 @@ class TelegramBot
     end
   end
   
-  def run_Bot()
+  def run()
     Telegram::Bot::Client.run(@token) do |bot|
-      puts 'Running bot!'
+      puts 'Running NewsBot!'
       loop do
         if(DateTime.now.hour == @hour)
           self.send_news(bot)
@@ -35,9 +35,9 @@ class TelegramBot
     end    
   end
   
-  def format_message(news)
+  private def format_message(news)
     messages = []
-    messages.push("Notícias do dia #{DateTime.now.day}/#{DateTime.now.month}/#{DateTime.now.year}")
+    messages.push("Notícias do dia #{DateTime.now.day.to_s.rjust(2, '0')}/#{DateTime.now.month.to_s.rjust(2, '0')}/#{DateTime.now.year}")
 
     news.each do |item|
       message = "#{item.title}\n\n"

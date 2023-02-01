@@ -1,1 +1,0 @@
-ENV['API_KEY'] = '76bf58dcc49148318f4ad8c4ea63549d'
