@@ -12,6 +12,8 @@ class ManagerBot
       puts 'Running ManagerBot!'
       
       bot.listen do |message|
+        # p message.from.id
+        # p message.from.first_name
         begin
           case message.text
           when '/help'
