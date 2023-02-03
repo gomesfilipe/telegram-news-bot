@@ -3,7 +3,7 @@ class SendEmails
     users = User.all
 
     users.each do |user|
-      PostMailer.with(user: user).send_mail.deliver_later
+      PostMailer.with(user: user).send_mail.deliver_now
     end
   end
 end
