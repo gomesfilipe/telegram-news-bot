@@ -1,5 +1,22 @@
-<h1>Post#send_mail</h1>
+<div>
+  <h1>Terubytes Newsletter</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/post_mailer/send_mail.html.erb
-</p>
+  <div>
+    <%# <%= @greeting %>
+    <%# , find me in app/views/post_mailer/send_mail.html.erb %>
+    <p>
+      Olá, <%= @user.name %>! <br>
+      Segue abaixo as notícias do dia <%= @day%>/<%= @month%>/<%= @year%> : <br>
+    </p>
+
+    <div>
+      <%  @news.each do |item| %>
+        <div>
+          <h3><%= link_to item.title,  item.url %></h3>
+        </div>
+      <%end%>
+    </div>
+    
+    <p> Atensiosamente, Terubynha </p>
+  </div>
+</div>

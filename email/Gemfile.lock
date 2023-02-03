@@ -128,6 +128,7 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
+    news-api (0.2.0)
     nio4r (2.5.8)
     nokogiri (1.14.1-x86_64-linux)
       racc (~> 1.4)
@@ -219,6 +220,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   letter_opener
+  news-api
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   selenium-webdriver
