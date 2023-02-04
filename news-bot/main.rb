@@ -3,11 +3,12 @@ require_relative './env.rb'
 
 token = ENV['token']
 channel = ENV['channel']
-hour = 10
+hour = 11
+min = 0
 category = 'technology'
 country = 'br'
 q = nil
-pageSize = 1
+pageSize = 5
 
-bot = NewsBot.new(token, channel, hour, category, country, q, pageSize)
+bot = NewsBot.new(token, channel, hour, min, category, country, q, pageSize)
 bot.run()

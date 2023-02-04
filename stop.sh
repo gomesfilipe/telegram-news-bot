@@ -1,0 +1,3 @@
+kill $PID_MANAGER_BOT
+kill $PID_NEWS_BOT
+kill $PID_EMAIL_BACKEND
