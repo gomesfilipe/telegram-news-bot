@@ -7,7 +7,7 @@ set :environment, "development"
 # env :PATH, ENV['PATH']
 set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
 
-every 1.day, at: '10:20' do
+every 1.day, at: '15:22' do
   runner "SendEmails.send", :environment => "development"
 end
 
