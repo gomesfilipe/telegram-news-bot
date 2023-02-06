@@ -90,3 +90,7 @@ Para encerrar o job de enviar emails:
 ```
 $ ./clearjob.sh
 ```
+
+# Breve demonstração da aplicação
+
+<a href="https://www.youtube.com/watch?v=kUgwq9t0jq8&ab_channel=FilipeGomes">Clique aqui</a> para ver breve demonstração do funcionamento da aplicação no Youtube.
