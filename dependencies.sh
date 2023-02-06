@@ -4,12 +4,12 @@ cd ..
 
 cd manager-bot
 bundle install
-cd..
+cd ..
 
 cd news-api
 bundle install
-cd..
+cd ..
 
 cd news-bot
 bundle install
-cd..
+cd ..
